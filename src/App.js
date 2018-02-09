@@ -6,6 +6,24 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import TextField from 'material-ui/TextField';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      beer: "",
+    }
+  }
+
+  componentDidMount() {
+    fetch('http://api.brewerydb.com/v2/fd77b4fabf07b01f131131ac4bf85ac6')
+    .then(results => {
+      console.log("hello");
+      console.log(results.json());
+      return results.json();
+    });
+
+
+  }
   render() {
     return (
       <MuiThemeProvider>
