@@ -5,7 +5,6 @@ from urllib.request import Request, urlopen
 app = Flask(__name__)
 
 
-
 @app.route("/", methods=['GET', 'POST'])
 def hello():
     return "Hello"
@@ -17,7 +16,7 @@ def beer_me(data):
     return "Hello"
 
 
-# # Flask stoff
+# Flask stoff
 if __name__ == "__main__":
     app.debug = True
     app.run()
